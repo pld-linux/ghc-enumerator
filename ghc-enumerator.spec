@@ -2,7 +2,7 @@
 Summary:	Reliable, high-performance processing with left-fold enumerators
 Name:		ghc-%{pkgname}
 Version:	0.4.19
-Release:	2
+Release:	3
 License:	MIT
 Group:		Development/Languages
 Source0:	http://hackage.haskell.org/packages/archive/%{pkgname}/%{version}/%{pkgname}-%{version}.tar.gz
@@ -77,7 +77,6 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc NEWS
 %doc %{name}-%{version}-doc/*
 %{_libdir}/%{ghcdir}/package.conf.d/%{pkgname}.conf
 %dir %{_libdir}/%{ghcdir}/%{pkgname}-%{version}
