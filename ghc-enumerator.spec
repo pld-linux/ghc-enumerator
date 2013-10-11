@@ -2,7 +2,7 @@
 Summary:	Reliable, high-performance processing with left-fold enumerators
 Name:		ghc-%{pkgname}
 Version:	0.4.19
-Release:	0.1
+Release:	1
 License:	MIT
 Group:		Development/Languages
 Source0:	http://hackage.haskell.org/packages/archive/%{pkgname}/%{version}/%{pkgname}-%{version}.tar.gz
@@ -84,10 +84,13 @@ rm -rf $RPM_BUILD_ROOT
 %{_libdir}/%{ghcdir}/%{pkgname}-%{version}/*.a
 %exclude %{_libdir}/%{ghcdir}/%{pkgname}-%{version}/*_p.a
 
-%dir %{_libdir}/%{ghcdir}/%{pkgname}-%{version}/PACKAGE
-%{_libdir}/%{ghcdir}/%{pkgname}-%{version}/PACKAGE/*.hi
+%dir %{_libdir}/%{ghcdir}/%{pkgname}-%{version}/Data
+%{_libdir}/%{ghcdir}/%{pkgname}-%{version}/Data/*.hi
+%dir %{_libdir}/%{ghcdir}/%{pkgname}-%{version}/Data/Enumerator
+%{_libdir}/%{ghcdir}/%{pkgname}-%{version}/Data/Enumerator/*.hi
 
 %files prof
 %defattr(644,root,root,755)
 %{_libdir}/%{ghcdir}/%{pkgname}-%{version}/*_p.a
-%{_libdir}/%{ghcdir}/%{pkgname}-%{version}/PACKAGE/*.p_hi
+%{_libdir}/%{ghcdir}/%{pkgname}-%{version}/Data/*.p_hi
+%{_libdir}/%{ghcdir}/%{pkgname}-%{version}/Data/Enumerator/*.p_hi
